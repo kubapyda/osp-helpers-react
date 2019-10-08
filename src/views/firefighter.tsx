@@ -1,15 +1,34 @@
 import './firefighter.scss';
 
+import { Avatar, Card, Icon } from 'antd';
+
 import React from 'react';
 
-const Firefighters: React.FC = () => {
+const { Meta } = Card;
+
+const Firefighter: React.FC = () => {
   return (
-    <div className="App">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-    </div>
+        <Card
+          style={{ width: 300 }}
+          cover={
+            <img
+              alt="example"
+              src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+            />
+          }
+          actions={[
+            <Icon type="setting" key="setting" />,
+            <Icon type="edit" key="edit" />,
+            <Icon type="ellipsis" key="ellipsis" />,
+          ]}
+        >
+          <Meta
+            avatar={<Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />}
+            title="Card title"
+            description="This is the description"
+          />
+        </Card>
   );
 }
 
-export default Firefighters;
+export default Firefighter;

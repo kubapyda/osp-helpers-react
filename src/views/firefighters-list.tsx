@@ -1,17 +1,15 @@
-import './firefighter.scss';
+import './firefighter-list.scss';
+import 'antd/dist/antd.css';
 
-import Button from '@material-ui/core/Button';
+import { Button } from 'antd';
+import Firefighter from './firefighter';
 import React from 'react';
 
 const FirefightersList: React.FC = () => {
   return (
     <div className="App">
-        <Button variant="contained" color="primary">
-            Dodaj
-        </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
+      <Button type="primary">Dodaj</Button>
+      <Firefighter></Firefighter>
     </div>
   );
 }
